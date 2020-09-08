@@ -1,0 +1,30 @@
+{
+  "name": "Work Pls",
+  "version": "0.1",
+  "description": "Autofill for Lever & Greenhouse",
+  "permissions": ["activeTab","declarativeContent","storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+ "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "page_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/pencil16.png",
+      "32": "images/pencil32.png",
+      "48": "images/pencil48.png",
+      "128": "images/pencil128.png"
+    }
+  },
+  "icons": {
+    "16": "images/pencil16.png",
+    "32": "images/pencil32.png",
+    "48": "images/pencil48.png",
+    "128": "images/pencil128.png"
+  },
+  "manifest_version": 2
+}

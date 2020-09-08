@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Autofill Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="options.css">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/images/pencil128.png" width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="menu-app">Application Info <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="app-form">
+        <h1>Your Application</h1>
+        <form id="form">
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="fname">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="fname" name="fname">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="lname">Last Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="lname" name="lname">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="phone">Phone</label>
+                <div class="col-sm-10">
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="1234567890">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="email">Email address</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="me@heyyyyyyyyyyyy.com"
+                        pattern="[a-zA-Z0-9.#$%&'*+\/=?^_`{|}~][a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="ccompany">Current Company</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="ccompany" name="ccompany">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="linkedin">LinkedIn URL</label>
+                <div class="col-sm-10">
+                    <input type="url" class="form-control" id="linkedin" name="linkedin">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="github">GitHub URL</label>
+                <div class="col-sm-10">
+                    <input type="url" class="form-control" id="github" name="github">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="twitter">Twitter URL</label>
+                <div class="col-sm-10">
+                    <input type="url" class="form-control" id="twitter" name="twitter">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="portfolio">Portfolio URL</label>
+                <div class="col-sm-10">
+                    <input type="url" class="form-control" id="portfolio" name="portfolio">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="addInfo">Additional info</label>
+                <textarea class="form-control" id="addInfo" name="addInfo" rows="3"></textarea>
+            </div>
+
+            <h1>U.S. Equal Opportunity Employment Information</h1>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="gender">Gender</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="gender" id="gender">
+                        <option value="">Select ...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="na">Decline to Self Identify</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="hispanic">Are you Hispanic/Latino?</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="hispanic" id="hispanic">
+                        <option value="">Select ...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="na">Decline to Self Identify</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="veteran">Veteran Status</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="veteran" id="veteran">
+                        <option value="">Select ...</option>
+                        <option value="yes">I identify as one or more of the classifications of a protected veteran
+                        </option>
+                        <option value="no">I am not a protected veteran</option>
+                        <option value="na">I don't wish to answer</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="disability">Disability Status</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="disability" id="disability">
+                        <option value="">Select ...</option>
+                        <option value="yes">Yes, I have a disability, or have a history/record of having a disability
+                        </option>
+                        <option value="no">No, I don't have a disability, or a history/record of having a disability
+                        </option>
+                        <option value="na">I don't wish to answer</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Save</button>
+            <button type="reset" class="btn btn-outline-danger">Reset</button>
+            <small class="form-text text-muted">We hate it when people take our data so we'd never take yours. Your info
+                is only stored locally in your browser.</small>
+        </form>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>

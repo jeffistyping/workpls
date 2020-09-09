@@ -27,6 +27,7 @@ function restore_options() {
         addInfo: '',
         gender: '',
         hispanic: '',
+        race: '',
         veteran: '',
         disability: '',
     }, items => {

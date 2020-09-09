@@ -7,6 +7,17 @@ function autofill_handler(element) {
     });
 }
 
+var eeoRaceMapping = {
+    1: "American Indian or Alaska Native (Not Hispanic or Latino)",
+    2: "Asian (Not Hispanic or Latino)",
+    3: "Black or African American (Not Hispanic or Latino)",
+    4: "Hispanic or Latino",
+    5: "White (Not Hispanic or Latino)",
+    6: "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)",
+    7: "Two or More Races (Not Hispanic or Latino)",
+    8: "Decline to self-identify"
+}
+
 chrome.storage.local.get({
     fname: '',
     lname: '',
@@ -20,6 +31,7 @@ chrome.storage.local.get({
     addInfo: '',
     gender: '',
     hispanic: '',
+    race: '',
     veteran: '',
     disability: ''
 }, function (items) {
@@ -82,5 +94,20 @@ chrome.storage.local.get({
             autofill_handler(appFields['comments']);
         }
 
+        // EEO
+        if (appFields['eeo[gender]'] && items.gender) {
+            appFields['eeo[gender]'].value = items.gender == "Na" ? "Decline to self-identify" : items.gender;
+            autofill_handler(appFields['eeo[gender]']);
+        }
+
+        if (appFields['eeo[race]'] && items.race) {
+            appFields['eeo[race]'].value = eeoMapping[items.race];
+            autofill_handler(appFields['eeo[race]']);
+        }
+
+        if (appFields['eeo[veteran]'] && items.veteran) {
+            appFields['eeo[veteran]'].value = items.veteran == "Yes" ? "I am a veteran" : (items.veteran == "No" ? "I am not a veteran" : "Decline to self-identify");
+            autofill_handler(appFields['eeo[veteran]']);
+        }
     }
 });

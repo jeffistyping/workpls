@@ -1,4 +1,4 @@
 # Work, Pls. 
 
-An autofill app that tries its best to fill in common fields in several different ATS job applications
+An autofill app that fills in common fields for several different ATS job applications
 

@@ -5,18 +5,7 @@
     <title>Autofill Information</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <link rel="stylesheet" href="options.css">
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
 </head>
 
 <body>
@@ -117,10 +106,10 @@
                 <div class="col-sm-10">
                     <select class="form-control" name="gender" id="gender">
                         <option value="">Select ...</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                        <option value="na">Decline to Self Identify</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="Na">Decline to Self Identify</option>
                     </select>
                 </div>
             </div>
@@ -130,9 +119,26 @@
                 <div class="col-sm-10">
                     <select class="form-control" name="hispanic" id="hispanic">
                         <option value="">Select ...</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                        <option value="na">Decline to Self Identify</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Na">Decline to Self Identify</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="race">Please identify your race</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="race" id="race">
+                        <option value="">Please select</option>
+                        <option value="1">American Indian or Alaskan Native</option>
+                        <option value="2">Asian</option>
+                        <option value="3">Black or African American</option>
+                        <option value="4">Hispanic or Latino</option>
+                        <option value="5">White</option>
+                        <option value="6">Native Hawaiian or Other Pacific Islander</option>
+                        <option value="7">Two or More Races</option>
+                        <option value="8">Decline To Self Identify</option></select>
                     </select>
                 </div>
             </div>
@@ -142,10 +148,10 @@
                 <div class="col-sm-10">
                     <select class="form-control" name="veteran" id="veteran">
                         <option value="">Select ...</option>
-                        <option value="yes">I identify as one or more of the classifications of a protected veteran
+                        <option value="Yes">I identify as one or more of the classifications of a protected veteran
                         </option>
-                        <option value="no">I am not a protected veteran</option>
-                        <option value="na">I don't wish to answer</option>
+                        <option value="No">I am not a protected veteran</option>
+                        <option value="Na">I don't wish to answer</option>
                     </select>
                 </div>
             </div>
@@ -155,11 +161,11 @@
                 <div class="col-sm-10">
                     <select class="form-control" name="disability" id="disability">
                         <option value="">Select ...</option>
-                        <option value="yes">Yes, I have a disability, or have a history/record of having a disability
+                        <option value="Yes">Yes, I have a disability, or have a history/record of having a disability
                         </option>
-                        <option value="no">No, I don't have a disability, or a history/record of having a disability
+                        <option value="No">No, I don't have a disability, or a history/record of having a disability
                         </option>
-                        <option value="na">I don't wish to answer</option>
+                        <option value="Na">I don't wish to answer</option>
                     </select>
                 </div>
             </div>

@@ -2,12 +2,13 @@
   "name": "Work Pls",
   "version": "0.1",
   "description": "Autofill for Lever & Greenhouse",
-  "permissions": ["activeTab","declarativeContent","storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage","webNavigation"],
+  "minimum_chrome_version": "39",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
- "options_ui": {
+  "options_ui": {
     "page": "options/options.html",
     "open_in_tab": true
   },

@@ -13,17 +13,6 @@
         <a class="navbar-brand" href="#">
             <img src="/images/pencil128.png" width="30" height="30" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" id="menu-app">Application Info <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
     </nav>
 
     <div class="container" id="app-form">
@@ -175,6 +164,20 @@
             <small class="form-text text-muted">We hate it when people take our data so we'd never take yours. Your info
                 is only stored locally in your browser.</small>
         </form>
+    </div>
+    <div class="container" id="tracker">
+        <h1>Activity</h1>
+        <table class="table" id="job-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Job</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <button id="tracker-reset" class="btn btn-outline-danger">Reset Activity</button>
     </div>
     <script src="options.js"></script>
 </body>

@@ -6,6 +6,7 @@ function autofill_handler(element) {
         once: true
     });
 }
+
 chrome.storage.local.get({
     fname: '',
     lname: '',
@@ -24,6 +25,7 @@ chrome.storage.local.get({
     disability: ''
 }, function (items) {
     if (document.forms['application_form']) {
+
         var appFields = document.forms['application_form'].elements
         if (appFields['job_application[first_name]'] && items.fname) {
             appFields['job_application[first_name]'].value = items.fname;
@@ -108,5 +110,16 @@ chrome.storage.local.get({
             appFields['job_application[disability_status]'].value = items.disability == "Yes" ? 1 : (items.disability == "No" ? 2 : 3);
             autofill_handler(appFields['job_application[disability_status]']);
         }
+        
+        var jobName = document.querySelector('.app-title').textContent;
+        var companyName = document.querySelector('.company-name').textContent;
+
+        chrome.storage.local.get({
+            applied_jobs: {}
+        }, function(e) {
+            e.applied_jobs[companyName.replaceAll("at ", "") + " - " + jobName] = Date.now();
+            chrome.storage.local.set(e);
+        });
+
     }
 });

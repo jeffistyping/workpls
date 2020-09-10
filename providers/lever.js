@@ -7,7 +7,7 @@ function autofill_handler(element) {
     });
 }
 
-var eeoRaceMapping = {
+var eeoMapping = {
     1: "American Indian or Alaska Native (Not Hispanic or Latino)",
     2: "Asian (Not Hispanic or Latino)",
     3: "Black or African American (Not Hispanic or Latino)",
@@ -38,7 +38,7 @@ chrome.storage.local.get({
     if (document.forms.length > 0) {
         const appFields = document.forms[0].elements
 
-        if (appFields['name'] && items.fname ) {
+        if (appFields['name'] && items.fname) {
             appFields['name'].value = items.fname + " " + items.lname;
             autofill_handler(appFields['name']);
         }
@@ -110,4 +110,12 @@ chrome.storage.local.get({
             autofill_handler(appFields['eeo[veteran]']);
         }
     }
+
+    chrome.storage.local.get({
+        applied_jobs: {}
+    }, function (e) {
+        e.applied_jobs[document.title] = Date.now();
+        chrome.storage.local.set(e);
+    });
+
 });
